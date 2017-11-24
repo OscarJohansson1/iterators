@@ -11,6 +11,7 @@ class Cubes():
 
     """
     def __init__(self):
+        """Init method."""
         self.current = 0
 
     def __iter__(self):
@@ -28,6 +29,7 @@ class Primes():
 
     """
     def __init__(self):
+        """Init method."""
         self.current = 1
 
     def __iter__(self):
@@ -59,6 +61,7 @@ class Fibonacci():
 
     """
     def __init__(self):
+        """Init method."""
         self.a = 0
         self.b = 1
 
@@ -81,9 +84,12 @@ class Alphabet():
 
     """
     def __init__(self):
+        """Init method."""
         self.current = 0
-        self.names = ['Alef', 'Bet', 'Gimel', 'Dalet', 'He', 'Vav', 'Zayin', 'Het', 'Tet', 'Yod', 'Kaf',
-        'Lamed', 'Mem', 'Nun', 'Samekh', 'Ayin', 'Pe', 'Tsadi', 'Qof', 'Resh', 'Shin', 'Tav']
+        self.names = ['Alef', 'Bet', 'Gimel', 'Dalet', 'He', 'Vav', 'Zayin',
+                      'Het', 'Tet', 'Yod', 'Kaf', 'Lamed', 'Mem', 'Nun',
+                      'Samekh', 'Ayin', 'Pe', 'Tsadi', 'Qof', 'Resh', 'Shin',
+                      'Tav']
 
     def __iter__(self):
         return self

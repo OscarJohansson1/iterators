@@ -1,6 +1,7 @@
 """Övningar på generators."""
 from itertools import groupby
 
+
 def cubes():
     """Implementera en generator som skapar en serie med kuber (i ** 3).
 
@@ -61,8 +62,9 @@ def alphabet():
 
     """
     i = 0
-    a = ['Alef', 'Bet', 'Gimel', 'Dalet', 'He', 'Vav', 'Zayin', 'Het', 'Tet','Yod', 'Kaf', 'Lamed', 'Mem', 'Nun',
-                'Samekh', 'Ayin', 'Pe', 'Tsadi', 'Qof', 'Resh', 'Shin', 'Tav']
+    a = ['Alef', 'Bet', 'Gimel', 'Dalet', 'He', 'Vav', 'Zayin', 'Het', 'Tet',
+         'Yod', 'Kaf', 'Lamed', 'Mem', 'Nun',
+         'Samekh', 'Ayin', 'Pe', 'Tsadi', 'Qof', 'Resh', 'Shin', 'Tav']
     while True:
         yield a[i]
         i += 1
@@ -105,6 +107,5 @@ def look_and_say():
     """
     number = '1'
     while True:
-    	yield int(number)
-    	number = ''.join(str(len(list(g))) + k
-    	   for k, g in groupby(number))
+        yield int(number)
+        number = ''.join(str(len(list(g))) + k for k, g in groupby(number))
