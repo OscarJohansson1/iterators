@@ -3,27 +3,25 @@ from exercises.generators import cubes, primes, fibonacci, alphabet, permutation
 import json
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_generator_is_iterable():
     gen = cubes()
     assert '__init__' in dir(gen)
     assert '__next__' in dir(gen)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_cubes():
     c = iter(cubes())
     for i in range(1, 1001):
         value = next(c)
-        assert c == i ** 3
-
+        assert value == i ** 3
 
 @pytest.mark.skip('Not implemented yet.')
 def test_primes_is_iterable():
     gen = primes()
     assert '__init__' in dir(gen)
     assert '__next__' in dir(gen)
-
 
 @pytest.mark.skip('Not implemented yet.')
 def test_primes():
@@ -35,31 +33,31 @@ def test_primes():
         assert next(p) == prime
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_fibonacci_is_iterable():
     gen = fibonacci()
     assert '__init__' in dir(gen)
     assert '__next__' in dir(gen)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_fibonacci():
     with open('tests/data_fibonacci.json') as file:
         data = json.load(file)
 
     f = iter(fibonacci())
-    for fibonacci in data:
-        assert next(f) == fibonacci
+    for number in data:
+        assert next(f) == number
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_alphabet_is_iterable():
     gen = alphabet()
     assert '__init__' in dir(gen)
     assert '__next__' in dir(gen)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_alphabet():
     data = ['Alef', 'Bet', 'Gimel', 'Dalet', 'He', 'Vav', 'Zayin', 'Het',
             'Tet', 'Yod', 'Kaf', 'Lamed', 'Mem', 'Nun', 'Samekh', 'Ayin',
@@ -72,19 +70,19 @@ def test_alphabet():
         next(a)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_is_generator_iterable():
-    gen = permutations()
+    gen = permutations('abc')
     assert '__init__' in dir(gen)
     assert '__next__' in dir(gen)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_permutations():
     expected_result = ['abc', 'acb', 'bac', 'cab', 'cba', 'bca']
     result = []
 
-    p = iter(Permutations('abc'))
+    p = iter(permutations('abc'))
     while True:
         try:
             result.append(next(p))
@@ -100,18 +98,18 @@ def test_permutations():
         expected_result.remove(value)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_look_and_say_is_iterable():
     gen = look_and_say()
     assert '__init__' in dir(gen)
     assert '__next__' in dir(gen)
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_look_and_say():
     with open('tests/data_lookandsay.json') as file:
         data = json.load(file)
 
-    l = iter(LookAndSay())
+    l = iter(look_and_say())
     for value in data:
         assert next(l) == value
