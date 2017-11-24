@@ -70,7 +70,7 @@ def alphabet():
             raise StopIteration
 
 
-def permutations(value):
+def permutations(s):
     """En generator som returnerar alla permutationer av en inmatad sträng.
 
     Då strängen 'abc' matas in fås: 'abc', 'acb', 'bac', 'bca', 'cba', 'cab'
